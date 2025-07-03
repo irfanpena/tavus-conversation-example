@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/tavus-conversation-example/static/css/main.cb9c2c60.css",
+    "main.js": "/tavus-conversation-example/static/js/main.159e909a.js",
+    "index.html": "/tavus-conversation-example/index.html",
+    "main.cb9c2c60.css.map": "/tavus-conversation-example/static/css/main.cb9c2c60.css.map",
+    "main.159e909a.js.map": "/tavus-conversation-example/static/js/main.159e909a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cb9c2c60.css",
+    "static/js/main.159e909a.js"
+  ]
+}
