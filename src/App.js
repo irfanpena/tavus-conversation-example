@@ -156,6 +156,23 @@ const App = () => {
     }
   };
 
+  const handleEndMeeting = async () => {
+    const call = callRef.current;
+    if (!call) return;
+
+    try {
+      await call.leave();
+      callRef.current = null;
+      delete window._dailyCallObject;
+      setParticipants({});
+      setCurrentPage('start');
+      setRoomUrl(null);
+      window.location.reload(); 
+    } catch (err) {
+      console.error('Error ending meeting:', err);
+    }
+  };
+
   const handleStartCall = () => {
     init();
   };
@@ -263,6 +280,18 @@ const App = () => {
             <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-video-off-icon lucide-video-off"><path d="M10.66 6H14a2 2 0 0 1 2 2v2.5l5.248-3.062A.5.5 0 0 1 22 7.87v8.196"/><path d="M16 16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h2"/><path d="m2 2 20 20"/></svg>
           )}
         </button>
+
+        {currentPage === 'call' && (
+          <button
+            onClick={handleEndMeeting}
+            className="p-3 rounded-full bg-red-600 hover:bg-red-700 text-white shadow-lg hover:shadow-xl transition-all duration-300"
+            title="End Meeting"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        )}
       </div>
     );
   };
