@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/tavus-conversation-example/static/css/main.cb9c2c60.css",
-    "main.js": "/tavus-conversation-example/static/js/main.159e909a.js",
+    "main.css": "/tavus-conversation-example/static/css/main.a635a47a.css",
+    "main.js": "/tavus-conversation-example/static/js/main.a3a38720.js",
     "index.html": "/tavus-conversation-example/index.html",
-    "main.cb9c2c60.css.map": "/tavus-conversation-example/static/css/main.cb9c2c60.css.map",
-    "main.159e909a.js.map": "/tavus-conversation-example/static/js/main.159e909a.js.map"
+    "main.a635a47a.css.map": "/tavus-conversation-example/static/css/main.a635a47a.css.map",
+    "main.a3a38720.js.map": "/tavus-conversation-example/static/js/main.a3a38720.js.map"
   },
   "entrypoints": [
-    "static/css/main.cb9c2c60.css",
-    "static/js/main.159e909a.js"
+    "static/css/main.a635a47a.css",
+    "static/js/main.a3a38720.js"
   ]
 }
